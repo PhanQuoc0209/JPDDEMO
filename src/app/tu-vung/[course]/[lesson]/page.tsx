@@ -82,9 +82,17 @@ export default function TuVungLessonPage({
                 {lessonData.total} từ vựng
               </span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-ink">
-              {lessonData.title}
-            </h1>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h1 className="text-2xl sm:text-3xl font-bold text-ink">
+                {lessonData.title}
+              </h1>
+              <Link
+                href={`/tu-vung/${course}/${lesson}/flashcard`}
+                className="inline-flex items-center gap-1.5 rounded-full bg-ai px-4 py-2 text-xs font-semibold text-surface shadow-xs transition hover:bg-ai-2"
+              >
+                <span>🗂</span> Ôn bằng thẻ (Flashcard) →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

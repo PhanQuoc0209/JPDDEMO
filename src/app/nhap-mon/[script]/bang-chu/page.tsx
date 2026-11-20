@@ -106,12 +106,18 @@ export default function BangChuPage({ params }: { params: Promise<{ script: stri
       </div>
 
       {/* Action Footer */}
-      <div className="mt-12 flex justify-center">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
         <Link
-          href={`/nhap-mon/${script}/go`}
+          href={`/nhap-mon/${script}/flashcard`}
           className="inline-flex items-center gap-2 rounded-full bg-ai px-6 py-3 text-sm font-semibold text-surface shadow-md hover:bg-ai-2 transition"
         >
-          <span>⌨️</span> Luyện gõ phản xạ bảng {scriptName}
+          <span>🗂</span> Ôn tập thẻ {scriptName}
+        </Link>
+        <Link
+          href={`/nhap-mon/${script}/go`}
+          className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-6 py-3 text-sm font-semibold text-ink-2 shadow-xs hover:border-ai/50 hover:text-ai transition"
+        >
+          <span>⌨️</span> Luyện gõ phản xạ
         </Link>
       </div>
     </div>
