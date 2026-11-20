@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ruled: var(--ruled);
+  --color-ruled-2: var(--ruled-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-ai: var(--ai);
+  --color-ai-2: var(--ai-2);
+  --color-ai-deep: var(--ai-deep);
+  --color-ai-wash: var(--ai-wash);
+  --color-shu: var(--shu);
+  --color-gold: var(--gold);
+  --color-matsuba: var(--matsuba);
+  
+  --font-sans: var(--font-vi), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-jp-serif), "Zen Old Mincho", serif;
+  --font-jp: var(--font-jp-serif), "Zen Old Mincho", serif;
+  --font-display: var(--font-display), "Baloo 2", cursive;
+}
+
+:root {
+  --font-vi: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-jp-serif: "Zen Old Mincho", serif;
+  --font-jp-round: "Zen Maru Gothic", sans-serif;
+  --font-display: "Baloo 2", cursive;
+
+  --paper: #f5f4fb;
+  --surface: #ffffff;
+  --surface-2: #ecebf7;
+  --ruled: #e6e3f4;
+  --ruled-2: #d6d2ec;
+  --ink: #1c1a33;
+  --ink-2: #575478;
+  --ink-3: #8a87a8;
+  --line: #e5e2f2;
+  --line-2: #d0cce6;
+  --ai: #5a49d6;
+  --ai-2: #7264e1;
+  --ai-deep: #2c2270;
+  --ai-wash: #eeebfd;
+  --shu: #be456c;
+  --gold: #946720;
+  --matsuba: #20a076;
+  
+  --iro-1: #5a49d6;
+  --iro-2: #e0517f;
+  --iro-3: #20a076;
+  --iro-4: #bb8229;
+  --iro-5: #8b5cf6;
+  --iro-6: #1c9ab7;
+  --iro-7: #df6391;
+  --iro-8: #6675ee;
+  --iro-9: #d3724f;
+  --iro-10: #449f55;
+  
+  --shadow: 0 1px 2px #2c22700f, 0 4px 12px -4px #2c22701a, 0 12px 28px -14px #2c227029;
+  --cell: 2.5rem;
+  --kb: 0px;
+}
+
+:root[data-theme="dark"],
+.dark {
+  --paper: #12111c;
+  --surface: #1a1828;
+  --surface-2: #242135;
+  --ruled: #252236;
+  --ruled-2: #302c47;
+  --ink: #eceaf7;
+  --ink-2: #b6b2ce;
+  --ink-3: #8a86a5;
+  --line: #2c2941;
+  --line-2: #3b3754;
+  --ai: #9b8cff;
+  --ai-2: #b6abff;
+  --ai-deep: #241d52;
+  --ai-wash: #241f42;
+  --shu: #ff7ba7;
+  --gold: #f0b957;
+  --matsuba: #4ed3a4;
+  
+  --iro-1: #9b8cff;
+  --iro-2: #ff7ba7;
+  --iro-3: #4ed3a4;
+  --iro-4: #f0b957;
+  --iro-5: #b79cff;
+  --iro-6: #55cfe8;
+  --iro-7: #ff92b8;
+  --iro-8: #9aa5ff;
+  --iro-9: #eb9a77;
+  --iro-10: #79d98a;
+  
+  --shadow: 0 1px 2px #0000004d;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-vi), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jp {
+  font-family: var(--font-jp-serif), "Zen Old Mincho", "Yu Mincho", serif;
+}
+
+.kana {
+  font-family: var(--font-jp-round), "Zen Maru Gothic", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), "Baloo 2", cursive;
+}
+
+.genko-cell {
+  border: 1px solid var(--ruled-2);
+  background: var(--surface);
+  place-items: center;
+  display: grid;
+  position: relative;
+}
+
+.ruled-fade {
+  background-image: linear-gradient(to right, var(--ruled) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ruled) 1px, transparent 1px);
+  background-size: var(--cell, 2.5rem) var(--cell, 2.5rem);
+  -webkit-mask-image: linear-gradient(#000, #0000);
+  mask-image: linear-gradient(#000, #0000);
+}
+
+.frame {
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(140deg, var(--ai), var(--ai) 45%, var(--line-2)) border-box;
+  border: 1px solid transparent;
+}
+
+@keyframes jp-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise,
+.reveal {
+  animation: 0.5s cubic-bezier(0.22, 1, 0.36, 1) both jp-rise;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-3);
+}
