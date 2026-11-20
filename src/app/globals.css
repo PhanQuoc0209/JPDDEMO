@@ -34,72 +34,90 @@
   --font-jp-round: "Zen Maru Gothic", sans-serif;
   --font-display: "Baloo 2", cursive;
 
-  --paper: #f5f4fb;
-  --surface: #ffffff;
-  --surface-2: #ecebf7;
-  --ruled: #e6e3f4;
-  --ruled-2: #d6d2ec;
-  --ink: #1c1a33;
-  --ink-2: #575478;
-  --ink-3: #8a87a8;
-  --line: #e5e2f2;
-  --line-2: #d0cce6;
-  --ai: #5a49d6;
-  --ai-2: #7264e1;
-  --ai-deep: #2c2270;
-  --ai-wash: #eeebfd;
-  --shu: #be456c;
-  --gold: #946720;
-  --matsuba: #20a076;
+  /* Premium Japanese Light Theme */
+  --paper: #F8F7FF;
+  --surface: #FFFFFF;
+  --surface-2: #EDE9FE;
+  --surface-3: #E5DDFB;
+  --ruled: #EDE9FE;
+  --ruled-2: #E5DDFB;
+  --ink: #21164F;
+  --ink-2: #756C98;
+  --ink-3: #948BAF;
+  --line: #E5DDFB;
+  --line-2: #DDD6FE;
+  --ai: #7C3AED;
+  --ai-2: #A78BFA;
+  --ai-deep: #4C1D95;
+  --ai-wash: #EDE9FE;
+  --shu: #F472B6;
+  --gold: #FBBF24;
+  --matsuba: #2DD4BF;
   
-  --iro-1: #5a49d6;
-  --iro-2: #e0517f;
-  --iro-3: #20a076;
-  --iro-4: #bb8229;
-  --iro-5: #8b5cf6;
-  --iro-6: #1c9ab7;
-  --iro-7: #df6391;
-  --iro-8: #6675ee;
-  --iro-9: #d3724f;
-  --iro-10: #449f55;
+  --iro-1: #7C3AED;
+  --iro-2: #F472B6;
+  --iro-3: #2DD4BF;
+  --iro-4: #FBBF24;
+  --iro-5: #8B5CF6;
+  --iro-6: #06B6D4;
+  --iro-7: #EC4899;
+  --iro-8: #6366F1;
+  --iro-9: #F97316;
+  --iro-10: #10B981;
   
-  --shadow: 0 1px 2px #2c22700f, 0 4px 12px -4px #2c22701a, 0 12px 28px -14px #2c227029;
+  --shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.08), 0 2px 6px -1px rgba(124, 58, 237, 0.04);
   --cell: 2.5rem;
   --kb: 0px;
 }
 
 :root[data-theme="dark"],
 .dark {
-  --paper: #12111c;
-  --surface: #1a1828;
-  --surface-2: #242135;
-  --ruled: #252236;
-  --ruled-2: #302c47;
-  --ink: #eceaf7;
-  --ink-2: #b6b2ce;
-  --ink-3: #8a86a5;
-  --line: #2c2941;
-  --line-2: #3b3754;
-  --ai: #9b8cff;
-  --ai-2: #b6abff;
-  --ai-deep: #241d52;
-  --ai-wash: #241f42;
-  --shu: #ff7ba7;
-  --gold: #f0b957;
-  --matsuba: #4ed3a4;
-  
-  --iro-1: #9b8cff;
-  --iro-2: #ff7ba7;
-  --iro-3: #4ed3a4;
-  --iro-4: #f0b957;
-  --iro-5: #b79cff;
-  --iro-6: #55cfe8;
-  --iro-7: #ff92b8;
-  --iro-8: #9aa5ff;
-  --iro-9: #eb9a77;
-  --iro-10: #79d98a;
-  
-  --shadow: 0 1px 2px #0000004d;
+  --paper: #0c0b16;
+  --surface: #141226;
+  --surface-2: #1b1833;
+  --surface-3: #231f42;
+  --ruled: #1c1833;
+  --ruled-2: #28234a;
+  --ink: #ffffff;
+  --ink-2: #a5a1c9;
+  --ink-3: #757099;
+  --line: #221d3f;
+  --line-2: #342c5e;
+  --ai: #8b5cf6;
+  --ai-2: #7c3aed;
+  --ai-deep: #1e1642;
+  --ai-wash: rgba(139, 92, 246, 0.16);
+  --shu: #f43f5e;
+  --gold: #f59e0b;
+  --matsuba: #10b981;
+
+  --iro-1: #8b5cf6;
+  --iro-2: #f43f5e;
+  --iro-3: #06b6d4;
+  --iro-4: #f59e0b;
+  --iro-5: #a855f7;
+  --iro-6: #14b8a6;
+  --iro-7: #ec4899;
+  --iro-8: #6366f1;
+  --iro-9: #f97316;
+  --iro-10: #22c55e;
+
+  --shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel {
+  background: rgba(20, 18, 38, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.purple-glow {
+  box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.25);
+}
+
+.purple-glow-sm {
+  box-shadow: 0 0 16px -2px rgba(139, 92, 246, 0.3);
 }
 
 body {
@@ -137,10 +155,12 @@ body {
   mask-image: linear-gradient(#000, #0000);
 }
 
-.frame {
-  background: linear-gradient(var(--surface), var(--surface)) padding-box,
-    linear-gradient(140deg, var(--ai), var(--ai) 45%, var(--line-2)) border-box;
-  border: 1px solid transparent;
+/* Hide Next.js dev tools floating badge */
+nextjs-portal,
+#next-logo,
+[data-nextjs-toast],
+div[data-nextjs-dev-tools-button] {
+  display: none !important;
 }
 
 @keyframes jp-rise {
@@ -196,4 +216,136 @@ body {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+/* ======================================================== */
+/* HERO SECTION GRADIENT OVERLAYS (DUAL THEME COMPATIBLE)   */
+/* ======================================================== */
+.hero-gradient-overlay {
+  background: linear-gradient(90deg, rgba(249, 247, 255, 0.95) 0%, rgba(249, 247, 255, 0.8) 55%, rgba(249, 247, 255, 0) 100%);
+}
+
+:root[data-theme="dark"] .hero-gradient-overlay,
+.dark .hero-gradient-overlay,
+[data-theme="dark"] .hero-gradient-overlay {
+  background: linear-gradient(90deg, rgba(17, 13, 41, 0.97) 0%, rgba(22, 17, 53, 0.88) 55%, rgba(22, 17, 53, 0) 100%) !important;
+}
+
+.hero-dark-tint {
+  display: none;
+}
+
+:root[data-theme="dark"] .hero-dark-tint,
+.dark .hero-dark-tint,
+[data-theme="dark"] .hero-dark-tint {
+  display: block !important;
+  background: rgba(14, 10, 32, 0.38);
+  backdrop-filter: brightness(0.92);
+}
+
+/* ======================================================== */
+/* 3D EMBOSSED FLOATING TEXT ("HIỆU ỨNG NỔI")               */
+/* ======================================================== */
+.hero-embossed-title {
+  color: #21164F;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 4px rgba(33, 22, 79, 0.28),
+    0 6px 16px rgba(124, 58, 237, 0.22);
+}
+
+:root[data-theme="dark"] .hero-embossed-title,
+.dark .hero-embossed-title,
+[data-theme="dark"] .hero-embossed-title {
+  color: #FFFFFF !important;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.95),
+    0 2px 6px rgba(0, 0, 0, 0.9),
+    0 4px 18px rgba(139, 92, 246, 0.7),
+    0 8px 30px rgba(0, 0, 0, 0.7) !important;
+}
+
+.hero-embossed-sub {
+  color: #21164F;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8),
+    0 2px 4px rgba(33, 22, 79, 0.16);
+}
+
+:root[data-theme="dark"] .hero-embossed-sub,
+.dark .hero-embossed-sub,
+[data-theme="dark"] .hero-embossed-sub {
+  color: #FFFFFF !important;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.85),
+    0 2px 8px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Card 1 3D Embossed Typography */
+.card-embossed-white {
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.35),
+    0 2px 4px rgba(18, 10, 36, 0.9),
+    0 4px 12px rgba(18, 10, 36, 0.7),
+    0 8px 24px rgba(124, 58, 237, 0.4);
+}
+
+.card-sub-embossed {
+  text-shadow:
+    0 1px 2px rgba(18, 10, 36, 0.85),
+    0 2px 6px rgba(18, 10, 36, 0.65);
+}
+
+/* ======================================================== */
+/* GRADUAL STAGGERED ENTRANCE ANIMATION                      */
+/* "Khi mở ra chữ sẽ xuất hiện trên ảnh 1 từ từ"             */
+/* ======================================================== */
+@keyframes floatEmerge {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 0.92;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.anim-emerge-1 {
+  animation: floatEmerge 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.anim-emerge-2 {
+  animation: floatEmerge 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.anim-emerge-3 {
+  animation: floatEmerge 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.anim-emerge-4 {
+  animation: floatEmerge 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+}
+
+.anim-emerge-5 {
+  animation: floatEmerge 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+}
+
+/* Playful Waving Hand */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 60% { transform: rotate(14deg); }
+  40%, 80% { transform: rotate(-10deg); }
+}
+
+.animate-wiggle {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wiggle 2.2s infinite ease-in-out;
 }

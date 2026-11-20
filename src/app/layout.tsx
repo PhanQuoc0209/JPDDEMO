@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Footer } from "@/components/Footer";
+import { AppShell } from "@/components/AppShell";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "Manabiman — Học tiếng Nhật",
+  title: "Manabiman — Học tiếng Nhật thông minh",
   description:
-    "Học tiếng Nhật từ bảng chữ cái đến JLPT: Hiragana, Katakana, Hán tự và từ vựng, có hình ảnh liên tưởng và luyện gõ phản xạ.",
+    "Nền tảng học tiếng Nhật hiện đại từ Hiragana, Katakana, Hán tự đến JLPT N5-N3 với hình ảnh liên tưởng và lộ trình thông minh.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -35,15 +34,14 @@ export default function RootLayout({
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{document.documentElement.dataset.theme=localStorage.getItem('manabiman-theme')==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}`,
+            __html: `try{var t=localStorage.getItem('manabiman-theme')||'light';document.documentElement.dataset.theme=t;if(t==='dark'){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){document.documentElement.dataset.theme='light'}`,
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-paper text-ink selection:bg-ai-wash selection:text-ai font-sans">
-        <ThemeToggle />
-        <Navbar />
-        <main className="flex-1 relative z-10">{children}</main>
-        <Footer />
+      <body className="min-h-full bg-paper font-sans antialiased">
+        <ThemeProvider>
+          <AppShell>{children}</AppShell>
+        </ThemeProvider>
       </body>
     </html>
   );
